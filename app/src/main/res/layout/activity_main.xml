@@ -7,15 +7,125 @@
     tools:context=".MainActivity">
 
     <View
-        android:id="@+id/day_bg"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/day_bg"/>
-    <View
         android:id="@+id/night_bg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/night_bg"
         />
+    <View
+        android:id="@+id/day_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/day_bg"/>
+
+    <ImageView
+        android:id="@+id/sun"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/sun"
+        app:layout_constraintVertical_bias=".78"
+        app:layout_constraintHorizontal_bias=".9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <ImageView
+        android:id="@+id/night_landscape"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/night_landscape"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/day_landscape"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/day_landscape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1" />
+
+
+    <com.mahfa.dnswitch.DayNightSwitch
+        android:id="@+id/day_night_switch"
+        android:layout_width="76dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/night_bg"
+        />
+
+    <EditText
+        android:id="@+id/email_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_bg"
+        app:layout_constraintWidth_percent=".8"
+        android:text="some@gmail.com"
+        android:textColor="#fff"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintVertical_bias=".2"
+        app:layout_constraintBottom_toBottomOf="@+id/night_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="18sp"
+        android:textColor="#fff"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/email_et"
+        app:layout_constraintStart_toStartOf="@+id/email_et" />
+
+
+
+    <EditText
+        android:id="@+id/pass_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_bg"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="*************"
+        android:textColor="#fff"
+        android:layout_marginTop="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/night_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_et"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintWidth_percent=".8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="18sp"
+        android:textColor="#fff"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/pass_et"
+        app:layout_constraintStart_toStartOf="@+id/pass_et" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
