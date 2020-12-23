@@ -58,7 +58,7 @@
     <ImageView
         android:id="@+id/day_landscape"
         android:layout_width="0dp"
-        android:layout_height="228dp"
+        android:layout_height="229dp"
         android:scaleType="fitXY"
         android:src="@drawable/day_landscape"
         app:layout_constraintBottom_toBottomOf="parent"
