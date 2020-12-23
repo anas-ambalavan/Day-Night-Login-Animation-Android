@@ -31,9 +31,21 @@
         app:layout_constraintTop_toTopOf="parent"
         />
     <ImageView
+        android:id="@+id/moon"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:src="@drawable/moon"
+        app:layout_constraintVertical_bias=".78"
+        app:layout_constraintHorizontal_bias=".9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <ImageView
         android:id="@+id/night_landscape"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="228dp"
         android:scaleType="fitXY"
         android:src="@drawable/night_landscape"
         app:layout_constraintVertical_bias="1"
@@ -46,7 +58,7 @@
     <ImageView
         android:id="@+id/day_landscape"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="228dp"
         android:scaleType="fitXY"
         android:src="@drawable/day_landscape"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -107,6 +119,7 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:text="*************"
+        android:inputType="textPassword"
         android:textColor="#fff"
         android:layout_marginTop="45dp"
         app:layout_constraintBottom_toBottomOf="@+id/night_bg"
